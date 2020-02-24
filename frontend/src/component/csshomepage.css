@@ -1,0 +1,12 @@
+.homejumbotron{
+    background-image: url('../img/backgroundslide1.jpg');
+    z-index: 1;
+    height: 500px;
+    color: white;
+    margin-bottom: 100px;;
+}
+
+.content{
+    padding-top: 100px;
+}
+

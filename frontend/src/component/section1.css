@@ -1,0 +1,24 @@
+.tengah {
+  text-align: center;
+}
+.jumbotron {
+  background-color: transparent;
+}
+.imgsize {
+  height: 100%;
+  width: 100%;
+}
+
+.imgsizesection2 {
+  width: 100%;
+  height: 100%;
+  margin: 20px 0;
+  display: flex;
+}
+
+.backgroundbig {
+  background-image: url("../img/backgroundslide2.png");
+}
+.shopnow {
+  padding-top: -100px;
+}

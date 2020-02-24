@@ -1,0 +1,62 @@
+.footerfix {
+  /* position: fixed !important; */
+  z-index: 1;
+  width: 100%;
+  opacity: 0.5;
+}
+.footerfixx {
+  z-index: 1;
+  width: 100%;
+  opacity: 0.5;
+}
+.fontheader li a {
+  color: black !important;
+}
+.footerpage {
+  height: 150px;
+  margin-top: 30px;
+}
+.editfooter {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: white;
+  /* margin-left: 100px !important; */
+}
+.iconuser {
+  font-size: 20px;
+}
+.carticon {
+  padding-top: 6px;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.footerbawah {
+  color: white;
+  background-color: rgb(37, 37, 37);
+  height: 80px;
+  /* width: 100%; */
+}
+.pademail {
+  padding-top: 35px;
+  padding-left: 115px;
+}
+.padcopyright {
+  padding-top: 35px;
+  padding-left: 400px;
+}
+.fontall {
+  font-family: serif;
+}
+.shopnow {
+  margin-top: -350px;
+  width: 120px;
+  padding-left: 60px;
+}
+.padbawah {
+  padding-top: 35px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.padjumbotron {
+  text-align: center;
+}
