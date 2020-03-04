@@ -1,9 +1,11 @@
 const userControllers = require("./userController");
 const AuthenticationController = require("./AuthenticationController");
+const prodControl = require("./prodControl");
 
 module.exports = {
   userControllers,
-  AuthenticationController
+  AuthenticationController,
+  prodControl
 };
 
 //alurnya controller -> router -> frontend

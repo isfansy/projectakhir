@@ -1,5 +1,5 @@
 .footerfix {
-  /* position: fixed !important; */
+  position: fixed !important;
   z-index: 1;
   width: 100%;
   opacity: 0.5;
@@ -59,4 +59,16 @@
 }
 .padjumbotron {
   text-align: center;
+}
+.gambartengah {
+  border-color: black !important;
+  padding-left: 90px;
+  padding-top: 50px;
+}
+.padprod {
+  /* padding-left: 200px; */
+  /* text-align: center; */
+  margin: auto;
+  width: 50%;
+  padding: 5px;
 }

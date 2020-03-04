@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { FiUser, FiShoppingCart } from "react-icons/fi";
+import { MdArrowDropDown } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 import imglogo from "../img/logoqiu.png";
+import { Link } from "react-router-dom";
 import {
   Collapse,
   Navbar,
@@ -25,26 +27,39 @@ const Headernofix = props => {
     <div>
       <Navbar className="footerfixx fontall" color="white" light expand="md">
         <div className="container fontheader">
-          <NavbarBrand href="/">
-            <div>
-              <img src={imglogo} alt="foto" height="70px" />
-            </div>
+          <NavbarBrand>
+            <Link to={"/"}>
+              <div>
+                <img src={imglogo} alt="foto" height="70px" />
+              </div>
+            </Link>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Shop</NavLink>
+                {/* <NavLink href="/components/">Shop</NavLink> */}
+                <UncontrolledDropdown nav inNavbar>
+                  <DropdownToggle nav style={{ paddingTop: "1px" }}>
+                    <Link to={"/"}>Shop</Link>
+                    <MdArrowDropDown />
+                  </DropdownToggle>
+                  <DropdownMenu bottom>
+                    <DropdownItem>Apparel</DropdownItem>
+                    <DropdownItem>Coffee Bean</DropdownItem>
+                    <DropdownItem>Accessories</DropdownItem>
+                    <DropdownItem>Limited Series</DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
               </NavItem>
+
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <Link style={{ paddingRight: "10px" }} to={"/store"}>
                   Store
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  New Arrival
-                </NavLink>
+                <Link to={"/newarrival"}>New Arrival</Link>
               </NavItem>
             </Nav>
 
@@ -60,8 +75,12 @@ const Headernofix = props => {
                   <FiUser className="iconuser" />
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Login</DropdownItem>
-                  <DropdownItem>Register</DropdownItem>
+                  <DropdownItem>
+                    <Link to={"/login"}>Login</Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to={"/register"}>Register</Link>
+                  </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Logout</DropdownItem>
                 </DropdownMenu>

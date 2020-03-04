@@ -32,8 +32,8 @@ const Registercomp = props => {
           <div className="row">
             <div className="col-md-6 ads">
               <h1>
-                <span id="fl">Company</span>
-                <span id="sl">Name</span>
+                <span id="fl">Coffee</span>
+                <span id="sl">for All</span>
               </h1>
             </div>
             <div className="col-md-6 login-form">

@@ -9,6 +9,7 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import Reducers from "./redux/reducers";
+import "react-web-tabs/dist/react-web-tabs.css";
 
 const store = createStore(Reducers, {}, applyMiddleware(thunk));
 

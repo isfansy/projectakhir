@@ -8,6 +8,10 @@ import Login from "./pages/login";
 import Register from "./pages/register";
 import NewArrival from "./pages/newarrival";
 import Store from "./pages/store";
+import Notfound from "./pages/notfound";
+import Howtoorder from "./pages/howtoorder";
+import Admin from "./pages/admin";
+import AddProduct from "./component/addProduct";
 
 class App extends Component {
   state = {
@@ -30,6 +34,10 @@ class App extends Component {
           <Route exact path={"/register"} component={Register} />
           <Route exact path={"/newarrival"} component={NewArrival} />
           <Route exact path={"/store"} component={Store} />
+          <Route exact path={"/notfound"} component={Notfound} />
+          <Route exact path={"/howtoorder"} component={Howtoorder} />
+          <Route exact path={"/admin"} component={Admin} />
+          <Route exact path={"/addproduct"} component={AddProduct} />
         </Switch>
       </div>
     );

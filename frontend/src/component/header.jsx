@@ -40,27 +40,26 @@ const Header = props => {
               <NavItem>
                 {/* <NavLink href="/components/">Shop</NavLink> */}
                 <UncontrolledDropdown nav inNavbar>
-                  <DropdownToggle nav>
-                    Shop
+                  <DropdownToggle nav style={{ paddingTop: "1px" }}>
+                    <Link to={"/"}>Product</Link>
                     <MdArrowDropDown />
                   </DropdownToggle>
                   <DropdownMenu bottom>
                     <DropdownItem>Apparel</DropdownItem>
-                    <DropdownItem>Acessoris</DropdownItem>
+                    <DropdownItem>Coffee Bean</DropdownItem>
+                    <DropdownItem>Accessories</DropdownItem>
                     <DropdownItem>Limited Series</DropdownItem>
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </NavItem>
 
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <Link style={{ paddingRight: "10px" }} to={"/store"}>
                   Store
-                </NavLink>
+                </Link>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
-                  New Arrival
-                </NavLink>
+                <Link to={"/newarrival"}>New Arrival</Link>
               </NavItem>
             </Nav>
 
@@ -76,8 +75,12 @@ const Header = props => {
                   <FiUser className="iconuser" />
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Login</DropdownItem>
-                  <DropdownItem>Register</DropdownItem>
+                  <DropdownItem>
+                    <Link to={"/login"}>Login</Link>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <Link to={"/register"}>Register</Link>
+                  </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Logout</DropdownItem>
                 </DropdownMenu>
