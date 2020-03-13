@@ -84,21 +84,23 @@
 import React, { Component } from "react";
 // import { render } from "react-dom";
 import { Tabs, Tab, TabPanel, TabList } from "react-web-tabs";
+import AddProduct from "../component/addProduct";
+import ManageProduct from "../component/manageProduct";
 
 class Admin extends Component {
   render() {
     return (
       <Tabs defaultTab="vertical-tab-one" vertical>
         <TabList>
-          <Tab tabFor="vertical-tab-one">Tab 1</Tab>
-          <Tab tabFor="vertical-tab-two">Tab 2</Tab>
-          <Tab tabFor="vertical-tab-three">Tab 3</Tab>
+          <Tab tabFor="vertical-tab-one">Add Product</Tab>
+          <Tab tabFor="vertical-tab-two">Manage Product</Tab>
+          <Tab tabFor="vertical-tab-three">Manage User</Tab>
         </TabList>
         <TabPanel tabId="vertical-tab-one">
-          <p>Tab 1 content</p>
+          <AddProduct />
         </TabPanel>
         <TabPanel tabId="vertical-tab-two">
-          <p>Tab 2 content</p>
+          <ManageProduct />
         </TabPanel>
         <TabPanel tabId="vertical-tab-three">
           <p>Tab 3 content</p>

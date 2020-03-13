@@ -1,17 +1,18 @@
 const multer = require("multer");
 const fs = require("fs");
 
-//return multer object
+// Return multer object
 
 module.exports = {
   uploader(destination, fileNamePrefix) {
     let defaultPath = "./public";
+
     const storage = multer.diskStorage({
       destination: (req, file, cb) => {
         const dir = defaultPath + destination;
         if (fs.existsSync(dir)) {
           console.log(dir, "exists");
-          cd(null, dir);
+          cb(null, dir);
         } else {
           fs.mkdir(dir, { recursive: true }, err => cb(err, dir));
           console.log(dir, "make");
@@ -21,20 +22,18 @@ module.exports = {
         let originalname = file.originalname;
         let ext = originalname.split(".");
         let filename = fileNamePrefix + Date.now() + "." + ext[ext.length - 1];
-        cb(null, true);
+        cb(null, filename);
       }
     });
 
     const imageFilter = (req, file, callback) => {
-      const ext = /\.(jpg|jpeg|png|gif|pdf|doc|docx|xlsx)$/;
+      const ext = /\.(jpg|jpeg|png|gif|pdf|doc|docx|xls|xlsx)$/;
       if (!file.originalname.match(ext)) {
-        return callback(
-          new Error("only selected file type are allowed"),
-          false
-        );
+        return callback(new Error("ga masuks"), false);
       }
       callback(null, true);
     };
+
     return multer({
       storage: storage,
       fileFilter: imageFilter

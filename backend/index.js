@@ -6,14 +6,17 @@ const cors = require("cors");
 const PORT = 2000;
 
 app.use(cors());
-app.use(BodyParser.urlencoded({ extended: false }));
+app.use(BodyParser.urlencoded({ extended: true }));
 app.use(BodyParser.json());
+app.use(express.static("public"));
 
 const {
   usersRouters,
   AuthenticationRouters,
   prodRouter
 } = require("./routers");
+
+// Set Static File
 
 // app.use("/users", usersRouters);
 app.use("/auth", AuthenticationRouters);
