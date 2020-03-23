@@ -31,18 +31,18 @@
   margin-right: 10px;
 }
 .footerbawah {
-  color: white;
-  background-color: rgb(37, 37, 37);
+  color: black;
+
   height: 80px;
   /* width: 100%; */
 }
 .pademail {
   padding-top: 35px;
-  padding-left: 115px;
+  padding-left: 33px;
 }
 .padcopyright {
   padding-top: 35px;
-  padding-left: 400px;
+  padding-left: 370px;
 }
 .fontall {
   font-family: serif;
@@ -71,4 +71,12 @@
   margin: auto;
   width: 50%;
   padding: 5px;
+}
+.padimagedetails {
+  /* margin-right: 100px; */
+  padding-right: 200px;
+}
+.cartmid {
+  margin-right: 1000px;
+  width: 600px;
 }

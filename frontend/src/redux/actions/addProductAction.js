@@ -14,6 +14,7 @@ export const getAllProductCategory = () => {
     dispatch({ type: GET_PRODUCT_CATEGORY_LOADING });
     Axios.get(`${Url}product/product-category`)
       .then(res => {
+        console.log(res);
         dispatch({
           type: GET_PRODUCT_CATEGORY_SUCCES,
           payload: res.data.dataCategory

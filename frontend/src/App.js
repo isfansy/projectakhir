@@ -12,6 +12,9 @@ import Notfound from "./pages/notfound";
 import Howtoorder from "./pages/howtoorder";
 import Admin from "./pages/admin";
 import AddProduct from "./component/addProduct";
+import ProductDetails from "./pages/productdetails";
+import Cart from "./pages/cart";
+import Checkout from "./pages/checkout";
 
 class App extends Component {
   state = {
@@ -38,6 +41,9 @@ class App extends Component {
           <Route exact path={"/howtoorder"} component={Howtoorder} />
           <Route exact path={"/admin"} component={Admin} />
           <Route exact path={"/addproduct"} component={AddProduct} />
+          <Route exact path={"/productdetails"} component={ProductDetails} />
+          <Route exact path={"/cart"} component={Cart} />
+          <Route exact path={"/checkout"} component={Checkout} />
         </Switch>
       </div>
     );

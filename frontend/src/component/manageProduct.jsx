@@ -98,6 +98,11 @@ export class ManageProduct extends Component {
     }
   };
 
+  // handleInputData = e => {
+  //   const { name, value } = e.target;
+  //   setaddData({ ...addData, [name]: value });
+  // };
+
   renderTab = () => {
     var tab = this.state.isiData;
     if (tab.length) {

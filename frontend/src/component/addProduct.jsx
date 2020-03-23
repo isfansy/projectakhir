@@ -15,29 +15,32 @@ const AddProduct = () => {
   //localstate
   const [addData, setaddData] = useState({});
   const [addImage, setaddImage] = useState(undefined);
+  // const [productCategory, setproductCategory]=useState({})
+  const [loading, setloading] = useState(true);
 
   //Set dispatch
   const dispatch = useDispatch();
 
   // Component did mount
-  // useEffect(() => {
-  //   dispatch(getAllProductCategory());
-  // }, []);
+  useEffect(() => {
+    dispatch(getAllProductCategory());
+    setloading(false);
+  }, []);
 
   //Get data from reducers
   const { productCategory } = useSelector(state => state.addProductReducers);
 
   // Render Product Category
-  // const renderProductCategory = () => {
-  //   return productCategory.map((val, index) => {
-  //     // console.log(val.idproductCategory);
-  //     return (
-  //       <option value={val.idproductCategory} key={index}>
-  //         {val.productCategory}
-  //       </option>
-  //     );
-  //   });
-  // };
+  const renderProductCategory = () => {
+    return productCategory.map((val, index) => {
+      // console.log(val.idproductCategory);
+      return (
+        <option value={val.idproductCategory} key={index}>
+          {val.productCategorycol}
+        </option>
+      );
+    });
+  };
   //handleinputdata
   const handleInputData = e => {
     const { name, value } = e.target;
@@ -94,7 +97,8 @@ const AddProduct = () => {
       jenisproduct: addData.jenisproduct,
       hargaproduct: addData.hargaproduct,
       deskripsiproduct: addData.deskripsiproduct,
-      categoryproductId: addData.idproductCategory
+      categoryproductId: addData.idproductCategory,
+      idCategory: addData.jenisproduct
     };
     console.log("data", newproduct);
 
@@ -104,6 +108,11 @@ const AddProduct = () => {
     // }
   };
   console.log(addData);
+  console.log(productCategory);
+
+  if (loading) {
+    return <div>loading...</div>;
+  }
   return (
     <div
     // style={{
@@ -157,13 +166,7 @@ const AddProduct = () => {
                 Pilih Jenis Kopi{" "}
               </option>
 
-              <option>Arabica Specialty</option>
-              <option>Arabica Peaberyy</option>
-              <option>Arabica Longberry</option>
-              <option>Arabica Wine</option>
-              <option>Arabica Yellow Catura</option>
-              <option>Arabica Luwak</option>
-              <option>Robusta Gayo</option>
+              {renderProductCategory()}
             </select>
           </FormGroup>
           <FormGroup style={{ paddingLeft: "160px" }}>
@@ -174,9 +177,7 @@ const AddProduct = () => {
               multiple
               onChange={handleImageData}
             />
-            <FormText color="muted">
-              Format foto harus dalam bentuk PNG
-            </FormText>
+            <FormText color="muted">Silahkan upload foto</FormText>
           </FormGroup>
         </Form>
       </div>

@@ -128,7 +128,7 @@ function Footer() {
                   placeholder="Email"
                 />
               </FormGroup>{" "}
-              <Button>Join Us</Button>
+              <Button style={{ backgroundColor: "black" }}>Join Us</Button>
             </Form>
           </div>
         </div>

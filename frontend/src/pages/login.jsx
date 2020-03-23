@@ -31,10 +31,11 @@ const Logincomp = props => {
       <div className="container login-container">
         <div className="row">
           <div className="col-md-6 ads">
-            <h1>
-              <span id="fl">Coffee</span>
-              <span id="sl">for All</span>
-            </h1>
+            <h3 style={{ paddingTop: "130px" }}>
+              <span id="fl">We Serve The Best Coffee</span>
+              <br />
+              <span id="sl">Login to fullfill your caffeine needed </span>
+            </h3>
           </div>
           <div className="col-md-6 login-form">
             <div className="profile-img">
