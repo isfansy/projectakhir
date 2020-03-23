@@ -18,6 +18,8 @@ const Cart = () => {
 
   const toggle = () => setModal(!modal);
 
+  renderCart = () => {};
+
   return (
     <div>
       <Headernofix />
