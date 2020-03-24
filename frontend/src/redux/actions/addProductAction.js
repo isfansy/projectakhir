@@ -26,6 +26,23 @@ export const getAllProductCategory = () => {
   };
 };
 
+// export const getProduct = () => {
+//   return dispatch => {
+//     dispatch({ type: GET_PRODUCT_LOADING });
+//     Axios.get(`${Url}product/product`)
+//       .then(res => {
+//         console.log(res);
+//         dispatch({
+//           type: GET_PRODUCT_SUCCESS,
+//           payload: res.data.getData
+//         });
+//       })
+//       .catch(err => {
+//         console.log(err);
+//       });
+//   };
+// };
+
 export const addProductAction = (formData, options) => {
   return dispatch => {
     dispatch({ type: ADD_PRODUCT_LOADING });

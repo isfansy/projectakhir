@@ -4,10 +4,15 @@ import imglogo from "../img/logoqiu.png";
 import Headernofix from "../component/headernofix";
 import { loginAction } from "../redux/actions/AuthAction";
 import { useDispatch } from "react-redux";
+import Axios from "axios";
 
 const Logincomp = props => {
   //state
   const [datalogin, setdatalogin] = useState({});
+  const [modalberhasil, setmodalberhasil] = useState(false);
+  const [modalberhasilmerchant, setmodalberhasilmerchant] = useState(false);
+  const [modalberhasiladmin, setmodalberhasiladmin] = useState(false);
+  const [err, seterr] = false;
 
   //inisialisasi dispatch . ngegantiin maps.state.props dan connect pada class component dlu
   const dispatch = useDispatch();
@@ -23,6 +28,29 @@ const Logincomp = props => {
     console.log(datalogin);
     const { username, password } = datalogin;
     dispatch(loginAction(username, password));
+    if (res.data.length) {
+      Axios.put(
+        `http://localhost:4000/users/edit-users_tanpapass/${res.data[0].id}`,
+        { ...datalogin, login: 1 }
+      )
+        .then(res1 => {
+          console.log(res1.data);
+          localStorage.setItem("dino", res.data[0].id);
+          loginAction(res.data[0]);
+          if (res.data[0].roleid === 2) {
+            setmodalberhasil(true);
+          } else if (res.data[0].roleid === 3) {
+            setmodalberhasilmerchant(true);
+          } else if (res.data[0].roleid === 1) {
+            setmodalberhasiladmin(true);
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    } else {
+      seterr(true);
+    }
   };
 
   return (

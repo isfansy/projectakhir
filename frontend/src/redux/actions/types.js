@@ -12,5 +12,8 @@ export const GET_PRODUCT_CATEGORY_ERROR = "GET_PRODUCT_CATEGORY_ERROR";
 export const ADD_PRODUCT_SUCCES = "ADD_PRODUCT_SUCCES";
 export const ADD_PRODUCT_ERROR = "ADD_PRODUCT_ERROR";
 export const ADD_PRODUCT_LOADING = "ADD_PRODUCT_LOADING";
+// export const GET_PRODUCT_SUCCESS = "GET_PRODUCT_SUCCESS";
+// export const GET_PRODUCT_ERROR = "GET_PRODUCT_ERROR";
+// export const GET_PRODUCT_LOADING = "GET_PRODUCT_LOADING";
 
 //untuk reducers. berfungsi untuk action.type di reducers
